@@ -1,0 +1,3 @@
+swapped,(NameExpr0)^(AssignExpr:assign)^(ExpressionStmt)^(BlockStmt)_(ForStmt)_(BinaryExpr:less)_(BinaryExpr:minus)_(NameExpr1),i
+array,(VariableDeclaratorId0)^(Parameter)^(MethodDeclaration)_(BlockStmt)_(ForStmt)_(BinaryExpr:and)_(NameExpr1),swapped
+swapped,(NameExpr0)^(AssignExpr:assign)_(BooleanLiteralExpr1),false

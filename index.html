@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tutorial Demo</title>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <script src="https://gw.alipayobjects.com/os/lib/antv/g6/4.3.11/dist/g6.min.js"></script>
+
+    <script>
+        const data = {
+            label: 'MethodDeclaration',
+            style: { stroke: '#AE4946', fill: 'white', lineWidth: 3 },
+            children: [
+                {
+                    label: 'VoidType',
+                    style: { stroke: 'black', fill: 'white' },
+                    type: 'rect',
+                },
+                {
+                    label: 'f',
+                    style: { stroke: '#76A95A', fill: 'white', lineWidth: 2 },
+                    type: 'rect',
+                },
+                {
+                    label: 'FormalParameters',
+                    style: { stroke: '#6082B6', fill: 'white', lineWidth: 2.5 },
+                    children: [
+                        {
+                            label: 'FormalParameter',
+                            style: { stroke: '#6082B6', fill: 'white', lineWidth: 2.5 },
+                            children: [
+                                {
+                                    label: 'ArrayType',
+                                    style: { stroke: 'black', fill: 'white' },
+                                    children: [
+                                        {
+                                            label: 'IntegralType',
+                                            style: { stroke: 'black', fill: 'white' },
+                                            children: [
+                                                {
+                                                    label: 'Int',
+                                                    style: { stroke: 'black', fill: 'white' },
+                                                    type: 'rect',
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            label: 'Dimensions',
+                                            style: { stroke: 'black', fill: 'white' },
+                                            type: 'rect',
+                                        },
+                                    ],
+                                },
+                                {
+                                    label: 'array',
+                                    style: { stroke: '#6082B6', fill: 'white', lineWidth: 2.5 },
+                                    type: 'rect',
+                                },
+                            ],
+                        },
+                    ],
+                },
+                {
+                    label: 'Block',
+                    style: { stroke: '#AE4946', fill: 'white', lineWidth: 3 },
+                    children: [
+                        {
+                            label: 'LocalVariableDeclaration',
+                            style: { stroke: 'black', fill: 'white' },
+                            children: [
+                                {
+                                    label: 'BooleanType',
+                                    style: { stroke: 'black', fill: 'white' },
+                                    type: 'rect',
+                                },
+                                {
+                                    label: 'VariableDeclarator',
+                                    style: { stroke: 'black', fill: 'white' },
+                                    children: [
+                                        {
+                                            label: 'swapped',
+                                            style: { stroke: 'black', fill: 'white' },
+                                            type: 'rect',
+                                        },
+                                        {
+                                            label: 'True',
+                                            style: { stroke: 'black', fill: 'white' },
+                                            type: 'rect',
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                        {
+                            label: 'ForStatement',
+                            style: { stroke: '#AE4946', fill: 'white', lineWidth: 3 },
+                            children: [
+                                {
+                                    label: 'For',
+                                    style: { stroke: 'black', fill: 'white' },
+                                    type: 'rect',
+                                },
+                                {
+                                    label: 'LocalVariableDeclaration',
+                                    style: { stroke: 'black', fill: 'white' },
+                                    children: [
+                                        {
+                                            label: 'IntegralType',
+                                            style: { stroke: 'black', fill: 'white' },
+                                            children: [
+                                                {
+                                                    label: 'Int',
+                                                    style: { stroke: 'black', fill: 'white' },
+                                                    type: 'rect',
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            label: 'VariableDeclarator',
+                                            style: { stroke: 'black', fill: 'white' },
+                                            children: [
+                                                {
+                                                    label: 'i',
+                                                    style: { stroke: 'black', fill: 'white' },
+                                                    type: 'rect',
+                                                },
+                                                {
+                                                    label: '0',
+                                                    style: { stroke: 'black', fill: 'white' },
+                                                    type: 'rect',
+                                                },
+                                            ],
+                                        },
+                                    ],
+                                },
+                                {
+                                    label: 'BinaryExpression',
+                                    style: { stroke: '#AE4946', fill: 'white', lineWidth: 3 },
+                                    children: [
+                                        {
+                                            label: 'BinaryExpression',
+                                            style: { stroke: '#AE4946', fill: 'white', lineWidth: 3 },
+                                            children: [
+                                                {
+                                                    label: 'i',
+                                                    style: { stroke: '#AE4946', fill: 'white', lineWidth: 3 },
+                                                    type: 'rect',
+                                                },
+                                                {
+                                                    label: 'FieldAccess',
+                                                    style: { stroke: 'black', fill: 'white' },
+                                                    children: [
+                                                        {
+                                                            label: 'array',
+                                                            style: { stroke: 'black', fill: 'white' },
+                                                            type: 'rect',
+                                                        },
+                                                        {
+                                                            label: 'length',
+                                                            style: { stroke: 'black', fill: 'white' },
+                                                            type: 'rect',
+                                                        },
+                                                    ],
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            label: 'swapped',
+                                            style: { stroke: '#6082B6', fill: 'white', lineWidth: 2.5 },
+                                            type: 'rect',
+                                        },
+                                    ],
+                                },
+                                {
+                                    label: 'UpdateExpression',
+                                    style: { stroke: 'black', fill: 'white' },
+                                    children: [
+                                        {
+                                            label: 'i',
+                                            style: { stroke: 'black', fill: 'white' },
+                                            type: 'rect',
+                                        },
+                                    ],
+                                },
+                                {
+                                    label: 'Block',
+                                    style: { stroke: '#AE4946', fill: 'white', lineWidth: 3 },
+                                    children: [
+                                        {
+                                            label: 'ExpressionStatement',
+                                            style: { stroke: '#AE4946', fill: 'white', lineWidth: 3 },
+                                            children: [
+                                                {
+                                                    label: 'AssignmentExpression',
+                                                    style: { stroke: '#AE4946', fill: 'white', lineWidth: 3 },
+                                                    children: [
+                                                        {
+                                                            label: 'swapped',
+                                                            style: { stroke: '#AE4946', fill: 'white', lineWidth: 3 },
+                                                            type: 'rect',
+                                                        },
+                                                        {
+                                                            label: 'False',
+                                                            style: { stroke: 'black', fill: 'white' },
+                                                            type: 'rect',
+                                                        },
+                                                    ],
+                                                },
+                                            ],
+                                        },
+                                        {
+                                            label: 'ForStatement',
+                                            style: { stroke: 'black', fill: 'white' },
+                                            children: [
+                                                {
+                                                    label: 'For',
+                                                    style: { stroke: 'black', fill: 'white' },
+                                                    type: 'rect',
+                                                },
+                                                {
+                                                    label: 'LocalVariableDeclaration',
+                                                    style: { stroke: 'black', fill: 'white' },
+                                                    children: [
+                                                        {
+                                                            label: 'IntegralType',
+                                                            style: { stroke: 'black', fill: 'white' },
+                                                            children: [
+                                                                {
+                                                                    label: 'Int',
+                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                    type: 'rect',
+                                                                },
+                                                            ],
+                                                        },
+                                                        {
+                                                            label: 'VariableDeclarator',
+                                                            style: { stroke: 'black', fill: 'white' },
+                                                            children: [
+                                                                {
+                                                                    label: 'j',
+                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                    type: 'rect',
+                                                                },
+                                                                {
+                                                                    label: '0',
+                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                    type: 'rect',
+                                                                },
+                                                            ],
+                                                        },
+                                                    ],
+                                                },
+                                                {
+                                                    label: 'BinaryExpression',
+                                                    style: { stroke: 'black', fill: 'white' },
+                                                    children: [
+                                                        {
+                                                            label: 'j',
+                                                            style: { stroke: 'black', fill: 'white' },
+                                                            type: 'rect',
+                                                        },
+                                                        {
+                                                            label: 'BinaryExpression',
+                                                            style: { stroke: 'black', fill: 'white' },
+                                                            children: [
+                                                                {
+                                                                    label: 'BinaryExpression',
+                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                    children: [
+                                                                        {
+                                                                            label: 'FieldAccess',
+                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                            children: [
+                                                                                {
+                                                                                    label: 'array',
+                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                    type: 'rect',
+                                                                                },
+                                                                                {
+                                                                                    label: 'length',
+                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                    type: 'rect',
+                                                                                },
+                                                                            ],
+                                                                        },
+                                                                        {
+                                                                            label: '1',
+                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                            type: 'rect',
+                                                                        },
+                                                                    ],
+                                                                },
+                                                                {
+                                                                    label: 'i',
+                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                    type: 'rect',
+                                                                },
+                                                            ],
+                                                        },
+                                                    ],
+                                                },
+                                                {
+                                                    label: 'UpdateExpression',
+                                                    style: { stroke: 'black', fill: 'white' },
+                                                    children: [
+                                                        {
+                                                            label: 'j',
+                                                            style: { stroke: 'black', fill: 'white' },
+                                                            type: 'rect',
+                                                        },
+                                                    ],
+                                                },
+                                                {
+                                                    label: 'Block',
+                                                    style: { stroke: 'black', fill: 'white' },
+                                                    children: [
+                                                        {
+                                                            label: 'IfStatement',
+                                                            style: { stroke: 'black', fill: 'white' },
+                                                            children: [
+                                                                {
+                                                                    label: 'If',
+                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                    type: 'rect',
+                                                                },
+                                                                {
+                                                                    label: 'ParenthesizedExpression',
+                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                    children: [
+                                                                        {
+                                                                            label: 'BinaryExpression',
+                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                            children: [
+                                                                                {
+                                                                                    label: 'ArrayAccess',
+                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                    children: [
+                                                                                        {
+                                                                                            label: 'array',
+                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                            type: 'rect',
+                                                                                        },
+                                                                                        {
+                                                                                            label: 'j',
+                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                            type: 'rect',
+                                                                                        },
+                                                                                    ],
+                                                                                },
+                                                                                {
+                                                                                    label: 'ArrayAccess',
+                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                    children: [
+                                                                                        {
+                                                                                            label: 'array',
+                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                            type: 'rect',
+                                                                                        },
+                                                                                        {
+                                                                                            label: 'BinaryExpression',
+                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                            children: [
+                                                                                                {
+                                                                                                    label: 'j',
+                                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                                    type: 'rect',
+                                                                                                },
+                                                                                                {
+                                                                                                    label: '1',
+                                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                                    type: 'rect',
+                                                                                                },
+                                                                                            ],
+                                                                                        },
+                                                                                    ],
+                                                                                },
+                                                                            ],
+                                                                        },
+                                                                    ],
+                                                                },
+                                                                {
+                                                                    label: 'Block',
+                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                    children: [
+                                                                        {
+                                                                            label: 'LocalVariableDeclaration',
+                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                            children: [
+                                                                                {
+                                                                                    label: 'IntegralType',
+                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                    children: [
+                                                                                        {
+                                                                                            label: 'Int',
+                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                            type: 'rect',
+                                                                                        },
+                                                                                    ],
+                                                                                },
+                                                                                {
+                                                                                    label: 'VariableDeclarator',
+                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                    children: [
+                                                                                        {
+                                                                                            label: 'temp',
+                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                            type: 'rect',
+                                                                                        },
+                                                                                        {
+                                                                                            label: 'ArrayAccess',
+                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                            children: [
+                                                                                                {
+                                                                                                    label: 'array',
+                                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                                    type: 'rect',
+                                                                                                },
+                                                                                                {
+                                                                                                    label: 'j',
+                                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                                    type: 'rect',
+                                                                                                },
+                                                                                            ],
+                                                                                        },
+                                                                                    ],
+                                                                                },
+                                                                            ],
+                                                                        },
+                                                                        {
+                                                                            label: 'ExpressionStatement',
+                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                            children: [
+                                                                                {
+                                                                                    label: 'AssignmentExpression',
+                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                    children: [
+                                                                                        {
+                                                                                            label: 'ArrayAccess',
+                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                            children: [
+                                                                                                {
+                                                                                                    label: 'array',
+                                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                                    type: 'rect',
+                                                                                                },
+                                                                                                {
+                                                                                                    label: 'j',
+                                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                                    type: 'rect',
+                                                                                                },
+                                                                                            ],
+                                                                                        },
+                                                                                        {
+                                                                                            label: 'ArrayAccess',
+                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                            children: [
+                                                                                                {
+                                                                                                    label: 'array',
+                                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                                    type: 'rect',
+                                                                                                },
+                                                                                                {
+                                                                                                    label: 'BinaryExpression',
+                                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                                    children: [
+                                                                                                        {
+                                                                                                            label: 'j',
+                                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                                            type: 'rect',
+                                                                                                        },
+                                                                                                        {
+                                                                                                            label: '1',
+                                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                                            type: 'rect',
+                                                                                                        },
+                                                                                                    ],
+                                                                                                },
+                                                                                            ],
+                                                                                        },
+                                                                                    ],
+                                                                                },
+                                                                            ],
+                                                                        },
+                                                                        {
+                                                                            label: 'ExpressionStatement',
+                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                            children: [
+                                                                                {
+                                                                                    label: 'AssignmentExpression',
+                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                    children: [
+                                                                                        {
+                                                                                            label: 'ArrayAccess',
+                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                            children: [
+                                                                                                {
+                                                                                                    label: 'array',
+                                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                                    type: 'rect',
+                                                                                                },
+                                                                                                {
+                                                                                                    label: 'BinaryExpression',
+                                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                                    children: [
+                                                                                                        {
+                                                                                                            label: 'j',
+                                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                                            type: 'rect',
+                                                                                                        },
+                                                                                                        {
+                                                                                                            label: '1',
+                                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                                            type: 'rect',
+                                                                                                        },
+                                                                                                    ],
+                                                                                                },
+                                                                                            ],
+                                                                                        },
+                                                                                        {
+                                                                                            label: 'temp',
+                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                            type: 'rect',
+                                                                                        },
+                                                                                    ],
+                                                                                },
+                                                                            ],
+                                                                        },
+                                                                        {
+                                                                            label: 'ExpressionStatement',
+                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                            children: [
+                                                                                {
+                                                                                    label: 'AssignmentExpression',
+                                                                                    style: { stroke: 'black', fill: 'white' },
+                                                                                    children: [
+                                                                                        {
+                                                                                            label: 'swapped',
+                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                            type: 'rect',
+                                                                                        },
+                                                                                        {
+                                                                                            label: 'True',
+                                                                                            style: { stroke: 'black', fill: 'white' },
+                                                                                            type: 'rect',
+                                                                                        },
+                                                                                    ],
+                                                                                },
+                                                                            ],
+                                                                        },
+                                                                    ],
+                                                                },
+                                                            ],
+                                                        },
+                                                    ],
+                                                },
+                                            ],
+                                        },
+                                    ],
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ],
+        }
+
+
+        const container = document.getElementById('container');
+        const width = container.scrollWidth;
+        const height = container.scrollHeight || 900;
+        const graph = new G6.TreeGraph({
+            container: 'container',
+            width,
+            height,
+            linkCenter: true,
+            modes: {
+                default: [
+                    {
+                        type: 'collapse-expand',
+                        onChange: function onChange(item, collapsed) {
+                            const data = item.getModel();
+                            data.collapsed = collapsed;
+                            return true;
+                        },
+                    },
+                    'drag-canvas',
+                    'zoom-canvas',
+                ],
+            },
+            defaultNode: {
+                type: 'ellipse',
+                size: [150, 40],
+                labelCfg: {
+                    position: 'center',
+                },
+                style: {
+                    lineHeight: "100px",
+                }
+            },
+            defaultEdge: {
+                type: 'cubic-vertical',
+            },
+            layout: {
+                type: 'compactBox',
+                direction: 'TB',
+                getId: function getId(d) {
+                    return d.id;
+                },
+                getHeight: function getHeight() {
+                    return 16;
+                },
+                getWidth: function getWidth() {
+                    return 16;
+                },
+                getVGap: function getVGap() {
+                    return 40;
+                },
+                getHGap: function getHGap() {
+                    return 100;
+                },
+            },
+        });
+
+        graph.node(function (node) {
+            let position = 'right';
+            let rotate = 0;
+            if (!node.children) {
+                position = 'bottom';
+                //rotate = Math.PI / 2;
+            }
+            return {
+                // label: node.id,
+                labelCfg: {
+                    // position,
+                    // offset: 5,
+                    // style: {
+                    //     rotate,
+                    //     textAlign: 'start',
+                    // },
+                    position: 'center'
+                },
+            };
+        });
+
+        graph.data(data);
+        graph.render();
+        graph.fitView();
+
+        graph.on('node:mouseenter', (evt) => {
+            const { item } = evt;
+            graph.setItemState(item, 'active', true);
+        });
+
+        graph.on('node:mouseleave', (evt) => {
+            const { item } = evt;
+            graph.setItemState(item, 'active', false);
+        });
+
+        if (typeof window !== 'undefined')
+            window.onresize = () => {
+                if (!graph || graph.get('destroyed')) return;
+                if (!container || !container.scrollWidth || !container.scrollHeight) return;
+                graph.changeSize(container.scrollWidth, container.scrollHeight);
+            };
+            // });
+
+
+    </script>
+</body>
+
+</html>
